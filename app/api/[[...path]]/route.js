@@ -17,6 +17,26 @@ async function connectToDatabase() {
   return client;
 }
 
+// Fonction pour convertir les liens ImgBB courts en liens directs
+function convertImgBBUrl(url) {
+  if (!url) return url;
+  
+  // Si c'est déjà un lien direct (commence par https://i.ibb.co), on le garde
+  if (url.startsWith('https://i.ibb.co/')) {
+    return url;
+  }
+  
+  // Si c'est un lien court ImgBB (https://ibb.co/xxxxx)
+  if (url.startsWith('https://ibb.co/')) {
+    const imageId = url.split('/').pop();
+    // On crée un lien direct avec extension jpg par défaut
+    return `https://i.ibb.co/${imageId}/image.jpg`;
+  }
+  
+  // Pour les autres liens (Unsplash, etc.), on les garde tels quels
+  return url;
+}
+
 // GET /api/
 export async function GET(request) {
   const { pathname } = new URL(request.url);
@@ -90,7 +110,7 @@ export async function POST(request) {
         name,
         price: parseInt(price),
         category,
-        image: image || '/placeholder-product.jpg',
+        image: convertImgBBUrl(image) || '/placeholder-product.jpg',
         description: description || '',
         stock: stock || 100,
         createdAt: new Date().toISOString()
@@ -248,7 +268,7 @@ export async function PUT(request) {
       if (name) updateData.name = name;
       if (price) updateData.price = parseInt(price);
       if (category) updateData.category = category;
-      if (image) updateData.image = image;
+      if (image) updateData.image = convertImgBBUrl(image);
       if (description !== undefined) updateData.description = description;
       if (stock !== undefined) updateData.stock = parseInt(stock);
       updateData.updatedAt = new Date().toISOString();
