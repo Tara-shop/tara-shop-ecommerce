@@ -1,0 +1,95 @@
+═══════════════════════════════════════════════════════════════════
+🚀 COMMANDES GIT POUR DÉPLOYER TARA SHOPP SUR GITHUB
+═══════════════════════════════════════════════════════════════════
+
+📋 AVANT DE COMMENCER :
+1. Créez un compte sur https://github.com
+2. Créez un nouveau dépôt : https://github.com/new
+   - Nom : tara-shopp-ecommerce
+   - Ne cochez rien (pas de README, gitignore, etc.)
+
+═══════════════════════════════════════════════════════════════════
+📦 ÉTAPE 1 : INITIALISER GIT
+═══════════════════════════════════════════════════════════════════
+
+cd /app
+git init
+git config user.name "Votre Nom"
+git config user.email "votre.email@example.com"
+
+═══════════════════════════════════════════════════════════════════
+📝 ÉTAPE 2 : AJOUTER LES FICHIERS
+═══════════════════════════════════════════════════════════════════
+
+git add .
+git commit -m "Initial commit - Tara shopp e-commerce"
+
+═══════════════════════════════════════════════════════════════════
+🔗 ÉTAPE 3 : CONNECTER À GITHUB
+═══════════════════════════════════════════════════════════════════
+
+⚠️ REMPLACEZ "VOTRE_USERNAME" PAR VOTRE NOM D'UTILISATEUR GITHUB !
+
+git remote add origin https://github.com/VOTRE_USERNAME/tara-shopp-ecommerce.git
+git branch -M main
+git push -u origin main
+
+Exemple si votre username est "amadou123" :
+git remote add origin https://github.com/amadou123/tara-shopp-ecommerce.git
+
+═══════════════════════════════════════════════════════════════════
+🔑 SI GIT DEMANDE UN MOT DE PASSE (TOKEN)
+═══════════════════════════════════════════════════════════════════
+
+1. Allez sur : https://github.com/settings/tokens
+2. "Generate new token" > "classic"
+3. Cochez "repo"
+4. Générez et COPIEZ le token
+5. Utilisez ce token comme mot de passe lors du push
+
+═══════════════════════════════════════════════════════════════════
+☁️ ÉTAPE 4 : DÉPLOYER SUR VERCEL
+═══════════════════════════════════════════════════════════════════
+
+1. Allez sur https://vercel.com
+2. Connectez-vous avec GitHub
+3. "New Project" > Sélectionnez "tara-shopp-ecommerce"
+4. Ajoutez les variables d'environnement :
+   
+   MONGO_URL = mongodb+srv://username:password@cluster.mongodb.net/...
+   DB_NAME = senegal_ecommerce
+   CORS_ORIGINS = *
+
+5. Cliquez "Deploy" 🚀
+
+═══════════════════════════════════════════════════════════════════
+💾 MONGODB ATLAS (Base de données gratuite)
+═══════════════════════════════════════════════════════════════════
+
+1. Créez un compte : https://mongodb.com/cloud/atlas
+2. Créez un cluster M0 (gratuit)
+3. Database Access > Add User
+4. Network Access > Allow Access from Anywhere (0.0.0.0/0)
+5. Connect > Drivers > Copiez l'URL
+
+═══════════════════════════════════════════════════════════════════
+✅ RÉSULTAT FINAL
+═══════════════════════════════════════════════════════════════════
+
+Votre site sera en ligne à :
+👉 https://tara-shopp-ecommerce.vercel.app
+
+Admin :
+👉 https://tara-shopp-ecommerce.vercel.app/admin
+
+═══════════════════════════════════════════════════════════════════
+📚 PLUS D'AIDE ?
+═══════════════════════════════════════════════════════════════════
+
+Consultez les fichiers :
+- GITHUB.md : Résumé rapide
+- DEPLOY.md : Guide détaillé complet
+
+═══════════════════════════════════════════════════════════════════
+Tara shopp - Bienvenue chez vous 🇸🇳
+═══════════════════════════════════════════════════════════════════

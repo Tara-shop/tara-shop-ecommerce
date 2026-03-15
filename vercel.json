@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "yarn build",
+  "devCommand": "yarn dev",
+  "installCommand": "yarn install",
+  "framework": "nextjs",
+  "env": {
+    "MONGO_URL": "@mongo_url",
+    "DB_NAME": "@db_name",
+    "CORS_ORIGINS": "@cors_origins"
+  }
+}
