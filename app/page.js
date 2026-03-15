@@ -539,17 +539,6 @@ function App() {
         )}
       </main>
 
-      {/* Admin Link */}
-      <div className="fixed bottom-4 left-4">
-        <Button 
-          variant="outline" 
-          size="sm"
-          onClick={() => window.location.href = '/admin'}
-          className="bg-white"
-        >
-          Admin
-        </Button>
-      </div>
     </div>
   );
 }
