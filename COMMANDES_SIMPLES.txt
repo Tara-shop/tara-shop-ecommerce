@@ -1,0 +1,87 @@
+═══════════════════════════════════════════════════════
+🚀 TARA SHOPP - DÉPLOIEMENT EN 3 ÉTAPES
+═══════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════
+ÉTAPE 1 : MONGODB (5 minutes)
+═══════════════════════════════════════════════════════
+
+1. Allez ici : https://mongodb.com/cloud/atlas/register
+2. Créez un compte
+3. Cliquez "Build a Database" → Choisissez "FREE"
+4. Créez un utilisateur (notez le mot de passe !)
+5. Network Access → "Allow Access from Anywhere"
+6. Cliquez "Connect" → "Drivers" → COPIEZ L'URL
+
+Votre URL ressemble à :
+mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/
+
+📝 GARDEZ CETTE URL !
+
+═══════════════════════════════════════════════════════
+ÉTAPE 2 : GITHUB (3 minutes)
+═══════════════════════════════════════════════════════
+
+A. Créez un compte : https://github.com/signup
+
+B. Créez un dépôt : https://github.com/new
+   Nom : tara-shopp
+
+C. COPIEZ CES COMMANDES (une par une) :
+
+cd /app
+
+git init
+
+git add .
+
+git commit -m "Mon site Tara shopp"
+
+⚠️ CHANGEZ "VOTRE_USERNAME" PAR VOTRE NOM GITHUB !
+git remote add origin https://github.com/VOTRE_USERNAME/tara-shopp.git
+
+git branch -M main
+
+git push -u origin main
+
+Si ça demande un mot de passe :
+→ Créez un token : https://github.com/settings/tokens/new
+→ Cochez "repo" → Générez → Copiez
+→ Utilisez comme mot de passe
+
+═══════════════════════════════════════════════════════
+ÉTAPE 3 : VERCEL (3 minutes)
+═══════════════════════════════════════════════════════
+
+1. Allez ici : https://vercel.com/signup
+2. Connectez avec GitHub
+3. Cliquez "Add New Project"
+4. Sélectionnez "tara-shopp"
+5. Cliquez "Import"
+
+6. Ajoutez 3 variables :
+
+   Variable 1 :
+   Name : MONGO_URL
+   Value : [VOTRE URL MONGODB DE L'ÉTAPE 1]
+
+   Variable 2 :
+   Name : DB_NAME
+   Value : senegal_ecommerce
+
+   Variable 3 :
+   Name : CORS_ORIGINS
+   Value : *
+
+7. Cliquez "Deploy"
+
+8. ATTENDEZ 3 MINUTES
+
+═══════════════════════════════════════════════════════
+✅ TERMINÉ !
+═══════════════════════════════════════════════════════
+
+Votre site : https://tara-shopp.vercel.app
+Admin : https://tara-shopp.vercel.app/admin
+
+═══════════════════════════════════════════════════════
