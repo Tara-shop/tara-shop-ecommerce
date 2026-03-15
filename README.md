@@ -1,4 +1,6 @@
-# 🏪 Boutique E-commerce Sénégal
+# 🏪 Tara shopp
+
+**Bienvenue chez vous**
 
 Plateforme e-commerce optimisée pour le marché sénégalais, avec support des méthodes de paiement locales (Wave, Orange Money, Cash on Delivery).
 

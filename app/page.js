@@ -455,9 +455,19 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-green-600">🏪 Boutique Sénégal</h1>
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_nextjs-senegal/artifacts/tldegc8p_image.png" 
+                alt="Tara shopp" 
+                className="h-12 w-auto object-contain"
+              />
+              <div>
+                <h1 className="text-xl font-bold text-gray-900">Tara shopp</h1>
+                <p className="text-xs text-gray-600">Bienvenue chez vous</p>
+              </div>
+            </div>
             <Button onClick={() => setShowCart(true)} className="relative">
               <ShoppingCart className="w-5 h-5" />
               {cart.length > 0 && (

@@ -156,7 +156,7 @@ function AdminPage() {
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
+            <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard - Tara shopp</h1>
             <p className="text-gray-600">Gestion de votre boutique</p>
           </div>
           <Button variant="outline" onClick={() => window.location.href = '/'}>
